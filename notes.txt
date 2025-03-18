@@ -1,0 +1,61 @@
+Filters:
+    - boekjaar (1 waarde)
+    - bedrijfsnummer (1 waarde)
+    - documentnummer van een boekhoudingsdocument (begin en eindwaarde)
+    - details (bool)
+
+Detail velden:
+    - bedrijfsnummer
+    - boekjaar
+    - documentnummer van een boekhoudingsdocument
+    - documentsoort
+    - documentdatum in document
+    - nummer van boekingsregel in het boekhoudingsdocument
+    - boekingssleutel
+    - datum van vereffening
+
+TABEL financiele boekhouding BKPF:
+    VELD    TYPE    LENGTE  OMSCHRIJVING
+    BUKRS   CHAR    4       Bedrijfsnummer
+    BELNR   CHAR    10      Documentnummer boekhoudingsdocument
+    GJAHR   CHAR    4       Boekjaar
+    BLART   CHAR    2       Documentsoort
+    BLDAT   DATUM   8       Documentdatum in document
+    BUDAT   DATUM   8       Boekingsdatum in document
+    MONAT   CHAR    2       Boekmaand
+    CPUDT   DATUM   8       Dag waarop boekhoudingsdocument is ingevoerd
+    CPUTM   TIJD    6       Tijd waarop gegevens zijn ingevoerd
+
+TABEL documentsegment boekhouding BSEG:
+    VELD    TYPE    LENGTE  OMSCHRIJVING
+    BUKRS   CHAR    4       Bedrijfsnummer
+    BELNR   CHAR    10      Documentnummer boekhoudingsdocument
+    GJAHR   CHAR    4       Boekjaar
+    BUZEI   CHAR    3       Nummer van boekingsregel in boekhoudingsdoc
+    BUZID   CHAR    1       Identificatie van boekingsregel
+    AUGDT   DATUM   8       Datum van vereffening
+    AUGCP   DATUM   8       Invoerdatum van de vereffening
+    AUGBL   CHAR    10      Documentnummer van vereffeningsdocument
+    BSCHL   CHAR    2       Boekingssleutel
+
+TABEL bij detailweergave:
+    VELD    TYPE    LENGTE  OMSCHRIJVING
+    BUKRS   CHAR    4       Bedrijfsnummer
+    GJAHR   CHAR    4       Boekjaar
+    BELNR   CHAR    10      Documentnummer boekhoudingsdocument
+    BLART   CHAR    2       Documentsoort
+    BLDAT   DATUM   8       Documentdatum in document
+    BUZEI   CHAR    3       Nummer van boekingsregel in boekhoudingsdoc
+    BSCHL   CHAR    2       Boekingssleutel
+    AUGDT   DATUM   8       Datum van vereffening
+
+
+DEMO HUMAN LANG:
+    [
+        { id: 1, bedrijfsnummer: int, boekjaar: int, docnr_boekh: int, docsoort: char(2), docdat: date, nr_boekregel: int, boekingssleutel: int, dat_veref: date}
+    ]
+
+DEMO:
+    [
+        {id: 1, BUKRS: CHAR(4), GJAHR: CHAR(4), BELNR: CHAR(10), BLART: CHAR(2), BLDAT: DATE, BUZEI: CHAR(3), BSCHL: CHAR(2), AUGDT: DATE}
+    ]
