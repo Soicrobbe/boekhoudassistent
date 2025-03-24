@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="table-container">
+            <h1>Document Table</h1>
+            
+            <!-- Table wrapper for horizontal scrolling -->
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>BUKRS</th>
+                            <th>GJAHR</th>
+                            <th>BELNR</th>
+                            <th>BLART</th>
+                            <th>BLDAT</th>
+                            <th>BUZEI</th>
+                            <th>BSCHL</th>
+                            <th>AUGDT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example data rows -->
+                        <tr>
+                            <td>1000</td>
+                            <td>2023</td>
+                            <td>12345</td>
+                            <td>ABCD</td>
+                            <td>2023-03-24</td>
+                            <td>1</td>
+                            <td>01</td>
+                            <td>2023-03-25</td>
+                        </tr>
+                        <tr>
+                            <td>1001</td>
+                            <td>2023</td>
+                            <td>12346</td>
+                            <td>EFGH</td>
+                            <td>2023-03-24</td>
+                            <td>2</td>
+                            <td>02</td>
+                            <td>2023-03-25</td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="buttons-container">
+            <!-- Button to go to the total documents page -->
+            <button onclick="window.location.href='totaal_aantal_documenten.html'" class="go-to-table-btn">Minder Details</button>
+            <!-- Back button to go to index -->
+            <button onclick="window.location.href='index.html'" class="back-btn">Terug naar Selectiescherm</button>
+
+            
+        </div>
+    </div>
+</body>
+</html>
